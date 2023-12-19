@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    int num, count_positive = 0, count_negative = 0, count_zero = 0;
+    char choice;
+
+    do {
+        printf("Enter a number: ");
+        scanf("%d", &num);
+
+        if (num > 0) {
+            count_positive++;
+        } else if (num < 0) {
+            count_negative++;
+        } else {
+            count_zero++;
+        }
+
+        printf("Do you want to continue (y/n)? ");
+        scanf(" %c", &choice);
+
+    } while (choice == 'y' || choice == 'Y');
+
+    printf("Count of positive numbers entered: %d\n", count_positive);
+    printf("Count of negative numbers entered: %d\n", count_negative);
+    printf("Count of zero numbers entered: %d\n", count_zero);
+
+    return 0;
+}
